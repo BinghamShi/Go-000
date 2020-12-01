@@ -1,7 +1,9 @@
-package main
+package Week02
 
 import (
 	"errors"
+
+	"./dao"
 
 	xerrors "github.com/pkg/errors"
 )
@@ -20,7 +22,7 @@ func processUser() error {
 }
 
 func processZUser() error {
-	_, err := dao.GetZUserName()
+	_, err := dao.ZGetUserName()
 	if err != nil {
 		return xerrors.Wrap(err, "get user name failed")
 	}
